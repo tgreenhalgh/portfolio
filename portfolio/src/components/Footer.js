@@ -12,20 +12,11 @@ const Content = styled.footer`
 
 const Footer = () => (
   <Content>
-    &copy; 2018 by Gatsby Starter Portfolio - Emilia. Pictures by{' '}
-    <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">
-      Unsplash
-    </a>
-    . Design by{' '}
+    &copy; 2019 by Thomas Greenhalgh. Design by{' '}
     <a href="https://www.lekoarts.de/en" target="_blank" rel="noopener noreferrer">
       LekoArts
     </a>
     .<br />
-    Have a look at the{' '}
-    <a href="https://github.com/LekoArts/gatsby-starter-portfolio-emilia" target="_blank" rel="noopener noreferrer">
-      Github repository
-    </a>
-    !
   </Content>
 )
 

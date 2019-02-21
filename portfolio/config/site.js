@@ -4,8 +4,8 @@ module.exports = {
   siteTitle: 'Thomas Greenhalgh Portfolio', // Navigation and Site Title
   siteTitleAlt: 'Thomas Greenhalgh Portfolio site', // Alternative Site title for SEO
   siteTitleShort: 'tgreenhalgh', // short_name for manifest
-  siteHeadline: 'Publishing & Creating stunning photos', // Headline for schema.org JSONLD
-  siteUrl: 'https://thomasgreenhalgh.cmo', // Domain of your site. No trailing slash!
+  siteHeadline: 'Full Stack Portfolio', // Headline for schema.org JSONLD
+  siteUrl: 'http://thomasgreenhalgh.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
   siteDescription:
@@ -24,15 +24,15 @@ module.exports = {
 
   // Your information
   avatar: '/logos/lekoarts.png',
-  name: 'LekoArts',
-  location: 'Germany',
+  name: 'Thomas Greenhalgh',
+  location: 'Santa Monica, CA',
   socialMedia: [
     {
       url: 'https://www.github.com/tgreenhalgh',
       name: 'Github',
     },
     {
-      url: 'https://thomasgreenhalgh',
+      url: 'http://thomasgreenhalgh.com',
       name: 'Homepage',
     },
   ],
