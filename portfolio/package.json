@@ -11,7 +11,8 @@
     "lint": "eslint . --ext .js,.jsx --ignore-path .gitignore",
     "lint:fix": "eslint . --ext .js,.jsx --fix --ignore-path .gitignore",
     "format": "prettier \"**/*.{md,mdx} \" --write",
-    "lint:ci": "yarn lint --format junit -o results/eslint/result.xml"
+    "lint:ci": "yarn lint --format junit -o results/eslint/result.xml",
+    "now-build": "npm run build"
   },
   "dependencies": {
     "@mdx-js/mdx": "^0.16.8",

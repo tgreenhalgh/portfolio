@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
-import arrowLeft from '../images/left-chevron.svg'
-import arrowRight from '../images/right-chevron.svg'
+import arrowLeft from '../images/left-chevron.svg';
+import arrowRight from '../images/right-chevron.svg';
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
     }
   }
   justify-items: center;
-`
+`;
 
 const Prev = styled.div`
   img {
@@ -29,7 +29,7 @@ const Prev = styled.div`
     height: 25px;
     margin: 0 1rem 0 0;
   }
-`
+`;
 
 const Next = styled.div`
   img {
@@ -38,38 +38,38 @@ const Next = styled.div`
     margin: 0 0 0 1rem;
   }
   margin-left: auto;
-`
+`;
 
 const ProjectPagination = ({ next, prev }) => (
   <Wrapper>
-    {prev && (
+    {next && (
       <Prev>
-        <Link to={prev.fields.slug}>
+        <Link to={next.fields.slug}>
           <img src={arrowLeft} alt="Arrow Left" />
-          {prev.frontmatter.title}
+          {next.frontmatter.title}
         </Link>
       </Prev>
     )}
 
-    {next && (
+    {prev && (
       <Next>
-        <Link to={next.fields.slug}>
-          {next.frontmatter.title}
+        <Link to={prev.fields.slug}>
+          {prev.frontmatter.title}
           <img src={arrowRight} alt="Arrow Right" />
         </Link>
       </Next>
     )}
   </Wrapper>
-)
+);
 
-export default ProjectPagination
+export default ProjectPagination;
 
 ProjectPagination.propTypes = {
   next: PropTypes.object,
   prev: PropTypes.object,
-}
+};
 
 ProjectPagination.defaultProps = {
   next: null,
   prev: null,
-}
+};
