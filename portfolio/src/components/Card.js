@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import { useSpring, animated, config } from 'react-spring'
-import { rgba } from 'polished'
-import Img from 'gatsby-image'
-import { Link } from 'gatsby'
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { useSpring, animated, config } from 'react-spring';
+import { rgba } from 'polished';
+import Img from 'gatsby-image';
+import { Link } from 'gatsby';
 
 const CardItem = styled(Link)`
   min-height: 500px;
@@ -25,7 +25,7 @@ const CardItem = styled(Link)`
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     min-height: 300px;
   }
-`
+`;
 
 const Cover = styled.div`
   width: 100%;
@@ -34,7 +34,7 @@ const Cover = styled.div`
   div {
     overflow: hidden;
   }
-`
+`;
 
 const Content = styled.div`
   padding: 1rem;
@@ -48,7 +48,7 @@ const Content = styled.div`
     opacity: 1;
     height: 120px;
   }
-`
+`;
 
 const Bottom = styled.div`
   margin-top: 0.5rem;
@@ -58,12 +58,12 @@ const Bottom = styled.div`
   div:first-child {
     margin-right: 1rem;
   }
-`
+`;
 
 const Name = styled.h2`
   margin-bottom: 0;
   margin-top: 0;
-`
+`;
 
 const Card = ({ path, cover, date, areas, title, delay }) => {
   const springProps = useSpring({
@@ -71,7 +71,7 @@ const Card = ({ path, cover, date, areas, title, delay }) => {
     delay: 200 * delay,
     from: { opacity: 0, transform: 'translate3d(0, 30px, 0)' },
     to: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
-  })
+  });
 
   return (
     <animated.div style={springProps}>
@@ -82,7 +82,6 @@ const Card = ({ path, cover, date, areas, title, delay }) => {
         <Content>
           <Name>{title}</Name>
           <Bottom>
-            <div>{date}</div>
             <div>
               {areas.map((area, index) => (
                 <React.Fragment key={area}>
@@ -95,10 +94,10 @@ const Card = ({ path, cover, date, areas, title, delay }) => {
         </Content>
       </CardItem>
     </animated.div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
 
 Card.propTypes = {
   path: PropTypes.string.isRequired,
@@ -107,4 +106,4 @@ Card.propTypes = {
   areas: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
   delay: PropTypes.number.isRequired,
-}
+};
