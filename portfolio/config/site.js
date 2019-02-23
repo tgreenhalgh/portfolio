@@ -32,8 +32,8 @@ module.exports = {
       name: 'Github',
     },
     {
-      url: 'http://thomasgreenhalgh.com',
-      name: 'Homepage',
+      url: 'https://linkedin.com/in/tgreenhalgh',
+      name: 'LinkedIn',
     },
   ],
 };
