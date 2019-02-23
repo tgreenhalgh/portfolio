@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   background: url("${props => props.theme.bgPattern}") #000;
   display: flex;
   position: relative;
-`
+`;
 
 const Content = styled.div`
   margin: 0 auto;
@@ -18,7 +18,7 @@ const Content = styled.div`
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     height: 500px;
   }
-`
+`;
 
 const Avatar = styled.div`
   height: 125px;
@@ -32,19 +32,24 @@ const Avatar = styled.div`
   img {
     border-radius: 50%;
   }
-`
+`;
 
 const Name = styled.h1`
   margin: 1rem 0 0.25rem 0;
   color: ${props => props.theme.colors.color};
-`
+`;
 
 const Location = styled.div`
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;
+
+const Info = styled.h4`
+  margin: 1rem 0 0.25rem 0;
+  color: ${props => props.theme.colors.color};
+`;
 
 const SocialMedia = styled.div`
   margin-top: 2rem;
@@ -52,7 +57,7 @@ const SocialMedia = styled.div`
   a {
     margin: 0 0.3rem;
   }
-`
+`;
 
 const Header = ({ avatar, name, location, socialMedia }) => (
   <Wrapper>
@@ -62,22 +67,28 @@ const Header = ({ avatar, name, location, socialMedia }) => (
       </Avatar>
       <Name>{name}</Name>
       <Location>{location}</Location>
+      <Info>A Full Stack developer specializing in Back-end tech</Info>
       <SocialMedia>
         {socialMedia.map(social => (
-          <a key={social.name} href={social.url} rel="noopener noreferrer" target="_blank">
+          <a
+            key={social.name}
+            href={social.url}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             {social.name}
           </a>
         ))}
       </SocialMedia>
     </Content>
   </Wrapper>
-)
+);
 
-export default Header
+export default Header;
 
 Header.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   socialMedia: PropTypes.array.isRequired,
-}
+};
