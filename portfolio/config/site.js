@@ -8,8 +8,7 @@ module.exports = {
   siteUrl: 'http://thomasgreenhalghnow.sh', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
-  siteDescription:
-    'Dark One-Page portfolio with cards & detailed project views',
+  siteDescription: 'Portfolio with cards & detailed project views',
   author: 'tgreenhalgh', // Author for schema.org JSONLD
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
