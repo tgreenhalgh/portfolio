@@ -34,5 +34,9 @@ module.exports = {
       url: 'https://linkedin.com/in/tgreenhalgh',
       name: 'LinkedIn',
     },
+    {
+      url: 'mailto:thomas.greenhalgh@gmail.com',
+      name: 'Contact Me',
+    },
   ],
 };
