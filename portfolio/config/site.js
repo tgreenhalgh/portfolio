@@ -31,6 +31,10 @@ module.exports = {
       name: 'Github',
     },
     {
+      url: 'https://sourcerer.io/tgreenhalgh',
+      name: 'Coding',
+    },
+    {
       url: 'https://linkedin.com/in/tgreenhalgh',
       name: 'LinkedIn',
     },
